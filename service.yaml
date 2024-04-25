@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: reddit-project-service
+  labels:
+    app: reddit-project
+spec:
+  selector:
+    app: reddit-project
+
+  ports:
+    - port: 3000
+      targetPort: 3000
+
+  type: LoadBalancer
